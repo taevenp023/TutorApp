@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<p>Hi {{ user.first_name }}!</p>
+<form action="{% url 'logout' %}" method="post">{% csrf_token %}
+    <button type="submit">Log Out</button>
+</form>
+{% else %}
+<p>You are not logged in</p>
+<a href="{% url 'login' %}">Log In</a> |
+<a href="{% url 'signup' %}">Sign Up</a>
+{% endif %}
+
+<h1>Weekly Tutor Availability</h1>
+
+<div class="post-entry">
+    <h2>Monday</h2>
+    {% for schedule in days %}
+    {% if schedule.day == 1 %}
+    <p><a href="{% url 'user_view' schedule.name.pk %}">{{ schedule.name.first_name }}</a>:
+        {{ schedule.start_time }} - {{ schedule.end_time }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<div class="post-entry">
+    <h2>Tuesday</h2>
+    {% for schedule in days %}
+    {% if schedule.day == 2 %}
+    <p><a href="{% url 'user_view' schedule.name.pk %}">{{ schedule.name.first_name }}</a>: {{ schedule.start_time }} -
+        {{ schedule.end_time }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<div class="post-entry">
+    <h2>Wednesday</h2>
+    {% for schedule in days %}
+    {% if schedule.day == 3 %}
+    <p><a href="{% url 'user_view' schedule.name.pk %}">{{ schedule.name.first_name }}</a>: {{ schedule.start_time }} -
+        {{ schedule.end_time }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<div class="post-entry">
+    <h2>Thursday</h2>
+    {% for schedule in days %}
+    {% if schedule.day == 4 %}
+    <p><a href="{% url 'user_view' schedule.name.pk %}">{{ schedule.name.first_name }}</a>: {{ schedule.start_time }} -
+        {{ schedule.end_time }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+
+<div class="post-entry">
+    <h2>Friday</h2>
+    {% for schedule in days %}
+    {% if schedule.day == 5 %}
+    <p><a href="{% url 'user_view' schedule.name.pk %}">{{ schedule.name.first_name }}</a>: {{ schedule.start_time }} -
+        {{ schedule.end_time }}</p>
+    {% endif %}
+    {% endfor %}
+</div>
+{% endblock content %}

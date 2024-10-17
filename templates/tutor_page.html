@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="post-entry">
+    <h1>{{ user.first_name }} {{ user.last_name }}</h1>
+    <p>Classes: {{ user.classes }}</p>
+    <p>Contact: {{ user.email }}</p>
+
+</div>
+<div class="bio">
+    <h2>Get to Know Me:</h2>
+    <p>{{ user.bio }}</p>
+</div>
+
+{% endblock content %}

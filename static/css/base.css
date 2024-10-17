@@ -1,0 +1,91 @@
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 18px;
+}
+
+header {
+    border-bottom: 1px solid #999;
+    margin-bottom: 2rem;
+    display: flex;
+}
+
+header h1 a {
+    color: green;
+    text-decoration: none;
+}
+
+
+header h2 {
+    color: red;
+    text-decoration: none;
+}
+
+.nav-left {
+    margin-right: auto;
+}
+
+.nav-right {
+    display: flex;
+    padding-top: 2rem;
+}
+
+.nav-bar {
+    background-color: rgb(158, 53, 53);
+}
+
+.nav-bar a {
+    color: white;
+}
+
+.post-entry {
+    margin-bottom: 2rem;
+}
+
+.post-entry h1 {
+    color: rgb(158, 53, 53);
+    text-decoration: none;
+}
+
+.post-entry h2 {
+    color: rgb(158, 53, 53);
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0.5rem 0;
+}
+
+.post-entry p a,
+.post-entry p a:visited {
+    color: blue;
+    text-decoration: none;
+}
+
+.post-entry p {
+    margin: 0;
+    font-weight: 400;
+}
+
+.post-entry p a:hover {
+    color: red;
+}
+
+.bio {
+    margin-top: 4rem;
+    margin-bottom: 5rem;
+}
+
+.bio h1 {
+    color: rgb(158, 53, 53);
+    text-decoration: none;
+}
+
+.bio h2 {
+    color: rgb(158, 53, 53);
+    text-decoration: none;
+}
+
+.bio p {
+    margin: 0;
+    font-weight: 400;
+}
